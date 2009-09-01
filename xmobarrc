@@ -1,4 +1,4 @@
-#This will be in first commit.
+#And this is second. I also removed previous line.
 Config { font = "xft:Terminus:size=10"
        , bgColor = "black"
        , fgColor = "grey"
