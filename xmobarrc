@@ -1,4 +1,5 @@
 #And this is second. I also removed previous line.
+#Now I added non-controlled by git file to this dir.
 Config { font = "xft:Terminus:size=10"
        , bgColor = "black"
        , fgColor = "grey"
