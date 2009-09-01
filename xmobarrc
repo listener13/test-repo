@@ -1,0 +1,16 @@
+Config { font = "xft:Terminus:size=10"
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = Top
+       , lowerOnStart = True
+       , commands = [ Run Weather "UWWW" ["-t","<station>: <tempC>C","-L","12","-H","26","--normal","green","--high","red","--low","lightblue"] 36000
+                    , Run Com "uname" ["-s","-r"] "" 36000
+                    , Run StdinReader
+                    , Run Com "python" ["~/scripts/mcabber_check.py"] "im" 10
+                    , Run Com "python" ["~/scripts/gmail_imap_check.py"] "gmail" 3000
+    		    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ <fc=#ee9a00>%date%</fc>| %gmail% | %im% | %UWWW% | %uname%"
+       }
